@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: nodejwt_app
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - DB_HOST=db
+      - DB_NAME=nodejwt
+      - DB_USER=postgres
+      - DB_PASSWORD=root
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    container_name: nodejwt_db
+    environment:
+      POSTGRES_DB: nodejwt
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
