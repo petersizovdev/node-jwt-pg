@@ -1,32 +1,24 @@
 ## Project specs
 
 📦 nodejwt/
-│
 ├── 📄 app.js
-│
 ├── 📁 public/
-│   ├── 📄 index.html
-│   ├── 📄 login.html
-│   ├── 📄 register.html
-│   └── 📄 profile.html
-│
+│ ├── 📄 index.html
+│ ├── 📄 login.html
+│ ├── 📄 register.html
+│ └── 📄 profile.html
 ├── 📁 db/
-│   └── 📄 db.js
-│
+│ └── 📄 db.js
 ├── 📁 models/
-│   └── 📄 User.js
-│
+│ └── 📄 User.js
 ├── 📁 controllers/
-│   ├── 📄 authController.js
-│   └── 📄 userController.js
-│
+│ ├── 📄 authController.js
+│ └── 📄 userController.js
 ├── 📁 routes/
-│   ├── 📄 authRoutes.js
-│   └── 📄 userRoutes.js
-│
+│ ├── 📄 authRoutes.js
+│ └── 📄 userRoutes.js
 ├── 📁 middleware/
-│   └── 📄 authMiddleware.js
-│
+│ └── 📄 authMiddleware.js
 └── 📄 .env
 
 - **app.js**: Главный файл приложения, который инициализирует сервер и подключает все необходимые модули.
