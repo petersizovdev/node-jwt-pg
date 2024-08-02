@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { where } = require('sequelize');
 const User = require('./models/User')(sequelize);
+require('dotenv').config();
 
 //Инициализируем приложение
 const app = express();
@@ -42,7 +43,7 @@ app.post('/register', async (req, res) => {
 //User login
 app.post('/login', async (req, res) => {
   try {
-	const { username, email, password } = req.body;
+    const { username, email, password } = req.body;
     const user = await User.findOne({ where: { email } }); //Поиск пользователя по уникальному email
 
     if (!user) {
