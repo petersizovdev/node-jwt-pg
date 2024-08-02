@@ -1,5 +1,35 @@
-## Project specs
+# NodeJWT Project
 
+## Architecture: "MVC" (Model-View-Controller)
+
+- **Models**: 
+  - `models/User.js`
+
+- **Views**: 
+  - `public/index.html`
+  - `public/login.html`
+  - `public/register.html`
+  - `public/profile.html`
+
+- **Controllers**: 
+  - `controllers/authController.js`
+  - `controllers/userController.js`
+
+- **Routes**: 
+  - `routes/authRoutes.js`
+  - `routes/userRoutes.js`
+
+- **Middleware**: 
+  - `middleware/authMiddleware.js`
+
+- **Database**: 
+  - `db/db.js`
+
+- **Main application file**: 
+  - `app.js`
+
+- **Environment variables**: 
+  - `.env`
 ```
 📦 nodejwt/
 │
@@ -30,6 +60,9 @@
 │
 └── 📄 .env
 ```
+
+
+## File Descriptions
 
 - **app.js**: Главный файл приложения, который инициализирует сервер и подключает все необходимые модули.
 - **public/**: Директория для статических файлов, таких как HTML-страницы.
