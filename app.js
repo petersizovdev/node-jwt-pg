@@ -67,7 +67,7 @@ app.post('/login', async (req, res) => {
 
 //Verify token (Middleware)
 function verifyToken(req, res, next) {
-  const token = req.headers.authorization; //Получаем токен
+  const token = req.header("Authorization"); //Получаем пользователя по токену по заголовку
   if (!token) {
     return res.status(401).json({ message: 'Access denied' }); //Не авторизованный токен - 401
   }
