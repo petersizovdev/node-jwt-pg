@@ -1,5 +1,6 @@
 const { Sequelize } = require('sequelize');
-require('dotenv').config();
+const dotenv = require('dotenv');
+dotenv.config();
 
 // Описание подключения к базе данных
 const sequelize = new Sequelize(
@@ -13,4 +14,11 @@ const sequelize = new Sequelize(
   }
 );
 
-module.exports = sequelize;
+// Импортируем модель пользователя и инициализируем её
+const UserModel = require('../models/User');
+const User = UserModel(sequelize);
+
+module.exports = {
+  sequelize,
+  User,
+};

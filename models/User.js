@@ -1,9 +1,9 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
 // Модель пользователя
-module.exports = function (sequelize) {
+module.exports = (sequelize) => {
   const User = sequelize.define(
-    'users',
+    'User', 
     {
       email: {
         type: DataTypes.STRING,
@@ -18,8 +18,7 @@ module.exports = function (sequelize) {
         type: DataTypes.STRING,
         allowNull: false,
       },
-    },
-
+    }
   );
   return User;
 };
