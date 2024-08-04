@@ -24,5 +24,5 @@ sequelize
     console.log(`Database connected`);
   })
   .catch((err) => {
-    console.log(`Connection error: ${err.message}`);
+    console.log(`Database connection error: ${err.message}`);
   });
