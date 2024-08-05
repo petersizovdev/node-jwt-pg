@@ -98,7 +98,6 @@
 JWT ──┤
       ├── Refresh token (long-term)
       │
-      └── Session (user time-out)
-
+      └── Session (user time-out) \\in-process
 
 ```
