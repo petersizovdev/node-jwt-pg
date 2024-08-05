@@ -2,34 +2,42 @@
 
 ## Architecture: "MVC" (Model-View-Controller)
 
-- **Models**: 
+- **Models**:
+
   - `models/User.js`
 
-- **Views**: 
+- **Views**:
+
   - `public/index.html`
   - `public/login.html`
   - `public/register.html`
   - `public/profile.html`
 
-- **Controllers**: 
+- **Controllers**:
+
   - `controllers/authController.js`
   - `controllers/userController.js`
 
-- **Routes**: 
+- **Routes**:
+
   - `routes/authRoutes.js`
   - `routes/userRoutes.js`
 
-- **Middleware**: 
+- **Middleware**:
+
   - `middleware/authMiddleware.js`
 
-- **Database**: 
+- **Database**:
+
   - `db/db.js`
 
-- **Main application file**: 
+- **Main application file**:
+
   - `app.js`
 
-- **Environment variables**: 
+- **Environment variables**:
   - `.env`
+
 ```
 📦 nodejwt/
 │
@@ -61,7 +69,6 @@
 └── 📄 .env
 ```
 
-
 ## File Descriptions
 
 - **app.js**: Главный файл приложения, который инициализирует сервер и подключает все необходимые модули.
@@ -83,3 +90,15 @@
 - **middleware/**: Директория для middleware.
   - **authMiddleware.js**: Middleware для аутентификации с использованием JWT.
 - **.env**: Файл для хранения переменных окружения, таких как строка подключения к базе данных и секретный ключ JWT.
+
+## JWT Auth
+
+```
+      ┌── Access token (short-term)
+JWT ──┤
+      ├── Refresh token (long-term)
+      │
+      └── Session (user time-out)
+
+
+```
