@@ -1,6 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
-// Модель пользователя
 module.exports = (sequelize) => {
   const User = sequelize.define('User', {
     email: {
@@ -15,6 +14,9 @@ module.exports = (sequelize) => {
     password: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    refreshToken: {
+      type: DataTypes.TEXT,
     },
   });
   return User;
