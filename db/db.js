@@ -17,8 +17,14 @@ const sequelize = new Sequelize(
 // Импортируем модель пользователя и инициализируем её
 const UserModel = require('../models/User');
 const User = UserModel(sequelize);
+const RoleModel = require('../models/Role');
+const Role = RoleModel(sequelize);
+
+User.belongsTo(Role);
+Role.hasMany(User);
 
 module.exports = {
   sequelize,
   User,
+  Role
 };

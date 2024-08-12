@@ -1,5 +1,8 @@
 const express = require('express');
 const { sequelize } = require('./db/db');
+const authRoutes = require('./routes/authRoutes');
+const userRoutes = require('./routes/userRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 require('dotenv').config();
 
 const app = express();
@@ -11,10 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Подключение маршрутов
-const authRoutes = require('./routes/authRoutes');
-const userRoutes = require('./routes/userRoutes');
 app.use('/', authRoutes);
 app.use('/', userRoutes);
+app.use('/', adminRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
